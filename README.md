@@ -24,33 +24,33 @@ Dataset Link: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-databa
 
 **Model 1: Feedforward artificial neural network (ANN) using TensorFlow and Keras to predict diabetes**
 Model Architecture:
-	1. Input Layer: The model takes 8 input features corresponding to the medical data from the dataset (e.g., pregnancies, glucose levels, BMI, etc.).
-	2. Hidden Layers: The model includes two hidden layers:
-	3. The first hidden layer has a variable number of units (3, 4, 5, or 6), using the ReLU activation function.
-	4. The second hidden layer also has a variable number of units (3, 4, 5, or 6), using the ReLU activation function.
-	5. Output Layer: The output layer consists of a single neuron with a sigmoid activation function, designed to predict the binary classification outcome (diabetes or not).
+1. Input Layer: The model takes 8 input features corresponding to the medical data from the dataset (e.g., pregnancies, glucose levels, BMI, etc.).
+2. Hidden Layers: The model includes two hidden layers:
+3. The first hidden layer has a variable number of units (3, 4, 5, or 6), using the ReLU activation function.
+4. The second hidden layer also has a variable number of units (3, 4, 5, or 6), using the ReLU activation function.
+5. Output Layer: The output layer consists of a single neuron with a sigmoid activation function, designed to predict the binary classification outcome (diabetes or not).
 
 Also updated model to enhance by adding Batch Normalization and Dropout layers.
-	1. Batch Normalization helps speed up training and improve generalization by normalizing activations, while Dropout (with a rate of 0.5) is used to prevent overfitting by randomly ignoring some neurons during training.
-	2. This model also uses the Adam optimizer and binary cross entropy loss function, with similar hidden layer configurations.
+1. Batch Normalization helps speed up training and improve generalization by normalizing activations, while Dropout (with a rate of 0.5) is used to prevent overfitting by randomly ignoring some neurons during training.
+2. This model also uses the Adam optimizer and binary cross entropy loss function, with similar hidden layer configurations.
  
 **Model 2: Deep Belief Network (DBN) with Restricted Boltzmann Machine (RBM)**
 
 Deep Belief Network (DBN) is implemented using a combination of Restricted Boltzmann Machines (RBM) and a fully connected neural network to predict diabetes based on the PIMA Indian Diabetes Dataset. This approach adds an unsupervised pre-training step with RBM before training a deep neural network.
 Model Workflow:
-	1.	Data Preprocessing: Input features are scaled using MinMaxScaler to normalize the data between 0 and 1, making it suitable for RBM and neural network processing.
-	2.	RBM Pre-training: The first layer is a Bernoulli RBM with 128 hidden units. It serves as an unsupervised feature extractor, transforming the original dataset into a new feature space.The RBM is trained with a learning rate of 0.01 for 30 iterations to capture the complex structure of the input data.
-	3.	Deep Neural Network:
-	i. The transformed features from the RBM are fed into a deep neural network consisting of:
-	ii. A fully connected layer with 128 units and ReLU activation.
-	iii. A second fully connected layer with 64 units.
-	iv. Dropout layers (0.3) are applied after each layer to prevent overfitting.
-	v.	The output layer is a single neuron with sigmoid activation for binary classification.
-	4.	Training:
-	i. The model is compiled with the Adam optimizer and binary cross entropy loss function.
-	ii. The neural network is trained on the RBM-transformed data for 150 epochs with a batch size of 10.
-	5.	Evaluation:
-	i. Predictions are made on the test set transformed by the RBM, and the model’s performance is evaluated using a confusion matrix and accuracy.
+1. Data Preprocessing: Input features are scaled using MinMaxScaler to normalize the data between 0 and 1, making it suitable for RBM and neural network processing.
+2. RBM Pre-training: The first layer is a Bernoulli RBM with 128 hidden units. It serves as an unsupervised feature extractor, transforming the original dataset into a new feature space.The RBM is trained with a learning rate of 0.01 for 30 iterations to capture the complex structure of the input data.
+3. Deep Neural Network:
+i. The transformed features from the RBM are fed into a deep neural network consisting of:
+ii. A fully connected layer with 128 units and ReLU activation.
+iii. A second fully connected layer with 64 units.
+iv. Dropout layers (0.3) are applied after each layer to prevent overfitting.
+v. The output layer is a single neuron with sigmoid activation for binary classification.
+4. Training:
+i. The model is compiled with the Adam optimizer and binary cross entropy loss function.
+ii. The neural network is trained on the RBM-transformed data for 150 epochs with a batch size of 10.
+5. Evaluation:
+i. Predictions are made on the test set transformed by the RBM, and the model’s performance is evaluated using a confusion matrix and accuracy.
 
 **Results:**
 
