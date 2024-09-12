@@ -5,15 +5,15 @@
 
 The PIMA Indian Diabetes Dataset is a collection of medical data for 768 female patients of Pima Indian heritage, aged 21 years and older, who were either diagnosed with diabetes or not. This dataset is widely used for machine learning and statistical analysis to predict diabetes based on several health factors.
 Features:
-	1. Pregnancies: Number of times pregnant.
-	2. Glucose: Plasma glucose concentration (2 hours in an oral glucose tolerance test).
-	3. BloodPressure: Diastolic blood pressure (mm Hg).
-	4. SkinThickness: Triceps skinfold thickness (mm).
-	5. Insulin: 2-Hour serum insulin (mu U/ml).
-	6. BMI: Body mass index (weight in kg/(height in m)^2).
-	7. DiabetesPedigreeFunction: A function that scores likelihood of diabetes based on family history.
-	8. Age: Age of the patient (years).
-	9. Outcome: Class variable (0 if non-diabetic, 1 if diabetic).
+1. Pregnancies: Number of times pregnant.
+2. Glucose: Plasma glucose concentration (2 hours in an oral glucose tolerance test).
+3. BloodPressure: Diastolic blood pressure (mm Hg).
+4. SkinThickness: Triceps skinfold thickness (mm).
+5. Insulin: 2-Hour serum insulin (mu U/ml).
+6. BMI: Body mass index (weight in kg/(height in m)^2).
+7. DiabetesPedigreeFunction: A function that scores likelihood of diabetes based on family history.
+8. Age: Age of the patient (years).
+9. Outcome: Class variable (0 if non-diabetic, 1 if diabetic).
 
 The goal is to use the dataset to build a predictive model for diagnosing diabetes based on patient health metrics.
 
